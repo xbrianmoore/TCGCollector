@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<BorderPane id="mainWindow" prefHeight="720.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aipo.tcgcollector.controllers.CardDetailsController">
+  <padding>
+    <Insets topRightBottomLeft="20" />
+  </padding>
+
+  <bottom>
+    <VBox prefHeight="76.0" prefWidth="1500.0">
+      <Text>Health: </Text>
+      <Text>Description: </Text>
+    </VBox>
+  </bottom>
+   <top>
+      <HBox prefHeight="40.0" prefWidth="1500.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField id="searchBar" prefHeight="25.0" prefWidth="200.0" promptText="Enter keywords (name, id, etc.)" />
+            <Button id="searchBarButton" mnemonicParsing="false" text="Search">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ListView id="searchQueryList" prefHeight="565.0" prefWidth="200.0" />
+            <Button id="addButton" layoutY="539.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="128.0" text="Add" />
+            <Button id="deleteButton" layoutX="128.0" layoutY="539.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="72.0" text="Delete" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
