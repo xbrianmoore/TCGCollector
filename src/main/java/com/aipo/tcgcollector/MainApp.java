@@ -11,8 +11,8 @@ import net.tcgdex.sdk.models.CardResume;
 import java.io.IOException;
 import java.util.Arrays;
 
-import static com.aipo.tcgcollector.services.Search.retrieveCards;
-import static com.aipo.tcgcollector.services.jsonObjectParser.parseJsonResponse;
+import  com.aipo.tcgcollector.services.Search;
+import static com.aipo.tcgcollector.utils.jsonObjectParser.parseJsonResponse;
 
 public class MainApp extends Application {
     @Override
@@ -21,7 +21,8 @@ public class MainApp extends Application {
         TCGdex tcgdex = new TCGdex("en");
         Card card = tcgdex.fetchCard("swsh3-136");
 
-        String cardSearch = retrieveCards("pikachu");
+        Search search = new Search();
+        String cardSearch = search.fetchCards("pikachu");
         CardResume[] card3 = parseJsonResponse(cardSearch);
 
         System.out.println(Arrays.toString(card3));

@@ -9,7 +9,6 @@ module com.aipo.tcgcollector {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
-    requires com.almasb.fxgl.all;
     requires java.sdk;
     requires java.net.http;
     requires com.google.gson;
@@ -19,4 +18,5 @@ module com.aipo.tcgcollector {
     exports com.aipo.tcgcollector.controllers;
     exports com.aipo.tcgcollector.services;
     opens com.aipo.tcgcollector.controllers to javafx.fxml;
+    exports com.aipo.tcgcollector.utils;
 }
